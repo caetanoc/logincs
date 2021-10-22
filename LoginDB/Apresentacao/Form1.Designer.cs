@@ -62,7 +62,7 @@ namespace LoginDB
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(43, 13);
             this.lblUsuario.TabIndex = 2;
-            this.lblUsuario.Text = "Usuario";
+            this.lblUsuario.Text = "Usuário";
             // 
             // txtUsuario
             // 

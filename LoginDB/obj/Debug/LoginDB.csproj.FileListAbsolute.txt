@@ -18,3 +18,5 @@ D:\work2021\logincs\LoginDB\obj\Debug\LoginDB.csproj.GenerateResource.cache
 D:\work2021\logincs\LoginDB\obj\Debug\LoginDB.csproj.CoreCompileInputs.cache
 D:\work2021\logincs\LoginDB\obj\Debug\LoginDB.exe
 D:\work2021\logincs\LoginDB\obj\Debug\LoginDB.pdb
+D:\work2021\logincs\LoginDB\obj\Debug\LoginDB.Apresentacao.FormCredito.resources
+D:\work2021\logincs\LoginDB\obj\Debug\LoginDB.Apresentacao.FormPrincipal.resources

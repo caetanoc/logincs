@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LoginDB.Apresentacao;
 using LoginDB.Controle;
 
 namespace LoginDB
@@ -32,7 +33,10 @@ namespace LoginDB
 
             if (ctl.Acessar(txtUsuario.Text, txtSenha.Text))
             {
-                MessageBox.Show("Bem vind@" + txtUsuario.Text);
+                // MessageBox.Show("Bem vind@" + txtUsuario.Text);
+
+                FormPrincipal formPrincipal = new FormPrincipal();
+                formPrincipal.Show();
             }
             else MessageBox.Show("Acesso negado. Usuario ou senha invalid@ " + ctl.mensagem);
 
