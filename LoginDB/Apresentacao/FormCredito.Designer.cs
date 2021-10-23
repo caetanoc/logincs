@@ -31,6 +31,7 @@ namespace LoginDB.Apresentacao
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblCaio = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -52,11 +53,21 @@ namespace LoginDB.Apresentacao
             this.label2.TabIndex = 1;
             this.label2.Text = "Colaboradores:";
             // 
+            // lblCaio
+            // 
+            this.lblCaio.AutoSize = true;
+            this.lblCaio.Location = new System.Drawing.Point(61, 90);
+            this.lblCaio.Name = "lblCaio";
+            this.lblCaio.Size = new System.Drawing.Size(28, 13);
+            this.lblCaio.TabIndex = 2;
+            this.lblCaio.Text = "Caio";
+            // 
             // FormCredito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblCaio);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormCredito";
@@ -70,5 +81,6 @@ namespace LoginDB.Apresentacao
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblCaio;
     }
 }
