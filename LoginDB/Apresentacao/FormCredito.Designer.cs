@@ -58,9 +58,9 @@ namespace LoginDB.Apresentacao
             this.lblCaio.AutoSize = true;
             this.lblCaio.Location = new System.Drawing.Point(61, 90);
             this.lblCaio.Name = "lblCaio";
-            this.lblCaio.Size = new System.Drawing.Size(28, 13);
+            this.lblCaio.Size = new System.Drawing.Size(53, 13);
             this.lblCaio.TabIndex = 2;
-            this.lblCaio.Text = "Caio";
+            this.lblCaio.Text = "Caio Lima";
             // 
             // FormCredito
             // 
