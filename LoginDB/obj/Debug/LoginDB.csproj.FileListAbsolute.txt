@@ -20,3 +20,15 @@ D:\work2021\logincs\LoginDB\obj\Debug\LoginDB.exe
 D:\work2021\logincs\LoginDB\obj\Debug\LoginDB.pdb
 D:\work2021\logincs\LoginDB\obj\Debug\LoginDB.Apresentacao.FormCredito.resources
 D:\work2021\logincs\LoginDB\obj\Debug\LoginDB.Apresentacao.FormPrincipal.resources
+D:\work\logincs\LoginDB\bin\Debug\LoginDB.exe.config
+D:\work\logincs\LoginDB\bin\Debug\LoginDB.exe
+D:\work\logincs\LoginDB\bin\Debug\LoginDB.pdb
+D:\work\logincs\LoginDB\obj\Debug\LoginDB.csproj.AssemblyReference.cache
+D:\work\logincs\LoginDB\obj\Debug\LoginDB.Login.resources
+D:\work\logincs\LoginDB\obj\Debug\LoginDB.Apresentacao.FormCredito.resources
+D:\work\logincs\LoginDB\obj\Debug\LoginDB.Apresentacao.FormPrincipal.resources
+D:\work\logincs\LoginDB\obj\Debug\LoginDB.Properties.Resources.resources
+D:\work\logincs\LoginDB\obj\Debug\LoginDB.csproj.GenerateResource.cache
+D:\work\logincs\LoginDB\obj\Debug\LoginDB.csproj.CoreCompileInputs.cache
+D:\work\logincs\LoginDB\obj\Debug\LoginDB.exe
+D:\work\logincs\LoginDB\obj\Debug\LoginDB.pdb

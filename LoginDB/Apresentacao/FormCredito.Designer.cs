@@ -30,6 +30,7 @@ namespace LoginDB.Apresentacao
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -42,11 +43,21 @@ namespace LoginDB.Apresentacao
             this.label1.TabIndex = 0;
             this.label1.Text = "Etec AE DS";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(61, 56);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Colaboradores:";
+            // 
             // FormCredito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormCredito";
             this.Text = "FormCredito";
@@ -58,5 +69,6 @@ namespace LoginDB.Apresentacao
         #endregion
 
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
