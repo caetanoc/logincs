@@ -37,6 +37,50 @@ namespace LoginDB.DAO
             return temAcesso;
         }
 
+        internal string RemoverLogin(string login)
+        {
+            cmd.CommandText = "delete from dbo.usuario where email = '" + login + "';";
+            cmd.Connection = conecta.Conectar();
+            try
+            {
+                int linhas = cmd.ExecuteNonQuery();
+                mensagem = " removido com sucesso!";
+            }
+            catch (SqlException e)
+            {
+                mensagem = e.Message;
+                //throw new Exception(e.Message);
+            }
+            finally
+            {
+                conecta.Desconectar();
+            }
 
+            return mensagem;
+        }
+
+        internal string CadastrarLogin(string login, string senha)
+        {
+            cmd.CommandText = "insert into dbo.usuario (email,senha) values ('" + login + "' , '" + senha + "');";
+            cmd.Connection = conecta.Conectar();
+            try
+            {
+                int linhas = cmd.ExecuteNonQuery();
+                mensagem =  " inserido com sucesso!";
+            }
+            catch (SqlException e)
+            {
+                mensagem = e.Message;
+                //throw new Exception(e.Message);
+            }
+            finally
+            {
+                conecta.Desconectar();
+            }
+
+            return mensagem;
+
+
+        }
     }
 }

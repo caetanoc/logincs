@@ -10,12 +10,12 @@ namespace LoginDB.Controle
     class Controle1
     {
         private bool temAcesso = false;
-        public String mensagem = ""; 
-
+        public String mensagem = "";
+        private UsuarioDAO usuario;
 
         public bool Acessar(String email, String senha)
         {
-            UsuarioDAO usuario = new UsuarioDAO();
+            usuario = new UsuarioDAO();
             temAcesso = usuario.VerificarLogin(email, senha);
 
             if (!usuario.mensagem.Equals("")) mensagem = usuario.mensagem;
@@ -24,6 +24,20 @@ namespace LoginDB.Controle
            
         }
 
+        public String Cadastrar(String login, String senha)
+        {
+            usuario = new UsuarioDAO();
+            mensagem = usuario.CadastrarLogin(login, senha);
 
+            return mensagem;
+        }
+
+        internal string Remover(string login)
+        {
+            usuario = new UsuarioDAO();
+            mensagem = usuario.RemoverLogin(login);
+
+            return mensagem;
+        }
     }
 }

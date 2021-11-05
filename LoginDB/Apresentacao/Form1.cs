@@ -43,6 +43,10 @@ namespace LoginDB
 
         }
 
-       
+        private void btnCriar_Click(object sender, EventArgs e)
+        {
+            FormCadastro1 cadastro = new FormCadastro1();
+            cadastro.Show();
+        }
     }
 }
