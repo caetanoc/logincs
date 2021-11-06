@@ -16,7 +16,7 @@ namespace LoginDB.Controle
         public bool Acessar(String email, String senha)
         {
             usuario = new UsuarioDAO();
-            temAcesso = usuario.VerificarLogin(email, senha);
+            temAcesso = usuario.VerificarLoginFire(email, senha);
 
             if (!usuario.mensagem.Equals("")) mensagem = usuario.mensagem;
 
@@ -27,7 +27,7 @@ namespace LoginDB.Controle
         public String Cadastrar(String login, String senha)
         {
             usuario = new UsuarioDAO();
-            mensagem = usuario.CadastrarLogin(login, senha);
+            mensagem = usuario.CadastrarLoginFire(login, senha);
 
             return mensagem;
         }

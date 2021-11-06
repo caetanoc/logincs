@@ -1,9 +1,14 @@
-﻿using System;
+﻿using FireSharp.Config;
+using FireSharp.Response;
+using FireSharp.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using LoginDB.Model;
 
 namespace LoginDB.DAO
 {
@@ -15,10 +20,74 @@ namespace LoginDB.DAO
         Conexao conecta = new Conexao();
         public String mensagem = "";
 
-        public bool VerificarLogin(String email, String senha)
+
+        IFirebaseConfig ifc = new FirebaseConfig()
         {
-            cmd.CommandText = "select * from usuario where email = '"+email+"' and senha = '"+senha+"'";
-            
+            AuthSecret = "XBYdh465vhnBfrFPZJqUUTVWIL6PsF5Rl8cFRBUd",
+            BasePath = "https://fireapp-d4454-default-rtdb.firebaseio.com/"
+        };
+
+        IFirebaseClient client;
+
+        public string CadastrarLoginFire(string login, string senha)
+        {
+
+            try
+            {
+                client = new FireSharp.FirebaseClient(ifc);
+
+                Usuario user = new Usuario()
+                {
+                    Username = login,
+                    Password = senha
+                };
+
+                SetResponse set = client.Set(@"Users/" + login, user);
+
+                mensagem = "Cadastrad@ com sucesso!";
+            }
+
+            catch (Exception e)
+            {
+                mensagem = "Sem conexão com internet! " + e.Message;
+            }
+
+            return mensagem;
+        }
+
+        public bool VerificarLoginFire(String login, String senha)
+        {
+
+            try
+            {
+                client = new FireSharp.FirebaseClient(ifc);
+
+                Usuario userForm = new Usuario()
+                {
+                    Username = login,
+                    Password = senha
+                };
+
+                FirebaseResponse res = client.Get(@"Users/" + login);
+                Usuario userNuvem = res.ResultAs<Usuario>();
+
+                return (Usuario.Comparar(userNuvem, userForm));
+
+            }
+
+            catch (Exception e)
+            {
+                mensagem = "Sem conexão com internet! " + e.Message;
+                return false;
+            }
+
+        }
+
+
+            public bool VerificarLogin(String email, String senha)
+        {
+            cmd.CommandText = "select * from usuario where email = '" + email + "' and senha = '" + senha + "'";
+
             try
             {
                 cmd.Connection = conecta.Conectar();
@@ -66,7 +135,7 @@ namespace LoginDB.DAO
             try
             {
                 int linhas = cmd.ExecuteNonQuery();
-                mensagem =  " inserido com sucesso!";
+                mensagem = " inserido com sucesso!";
             }
             catch (SqlException e)
             {
@@ -79,8 +148,7 @@ namespace LoginDB.DAO
             }
 
             return mensagem;
-
-
         }
+
     }
 }
