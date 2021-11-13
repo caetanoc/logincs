@@ -83,6 +83,26 @@ namespace LoginDB.DAO
 
         }
 
+        internal string RemoverLoginFire(string login)
+        {
+
+            try
+            {
+                client = new FireSharp.FirebaseClient(ifc);
+                client.Delete(@"Users/" + login);
+
+                mensagem = "Removid@ com sucesso!";
+            }
+
+            catch (Exception e)
+            {
+                mensagem = "Erro ao acessar Firebase! " + e.Message;
+            }
+
+            return mensagem;
+        }
+
+
 
             public bool VerificarLogin(String email, String senha)
         {

@@ -35,7 +35,7 @@ namespace LoginDB.Controle
         internal string Remover(string login)
         {
             usuario = new UsuarioDAO();
-            mensagem = usuario.RemoverLogin(login);
+            mensagem = usuario.RemoverLoginFire(login);
 
             return mensagem;
         }
